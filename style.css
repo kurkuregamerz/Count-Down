@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+@font-face {
+    font-family: monserrat;
+    src: url(Montserrat-VariableFont_wght.ttf);
+}
+@font-face {
+    font-family: lobster;
+    src: url(Lobster-Regular.ttf);
+}
+body{
+    background-color: rgb(20, 20, 20);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width:100vw;
+    background-image: url(/2025\ class\ VII\ excursion\ group\ photo.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: grid;
+    grid-template-rows: 2fr 8fr;
+}
+#count_down_name{
+    color: aliceblue;
+    display: flex;
+    font-family: lobster;
+    justify-self: center;
+    align-self: center;
+    font-size:clamp(3vmax, calc(5vmin + 2vmax), 10vmax);
+}
+
+#timer{
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    color: white;
+    font-family: monserrat;
+    font-weight: 600;
+    height:50vh;
+    width: 100vh;
+    justify-content: center;
+    justify-self: center;
+    align-self: center;
+    align-items: center;
+    font-size:clamp(3vmax, calc(5vmin + 5vmax), 15vmax);
+    max-width: fit-content;
+    grid-template-columns: repeat(1fr);
+    grid-template-rows: 1fr;
+    gap: 4vmax;
+    
+}
+.timer_item{
+    background-color: rgba(255, 255, 255, 0.336);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1vmax;
+    padding: 1vmax;
+    min-height: 12vmax;
+    min-width: 12vmax;
+    grid-row: 1fr;
+    grid-column: auto;
+    border: 1px solid rgba(255, 255, 255, 0.349);
+    box-shadow: 1px 1px -10px rgba(255, 255, 255, 0.288);
+}
+@media screen  and (max-width:100vh){
+    body{
+         grid-template-rows: 1fr 9fr;
+    }
+    #timer{
+        display: grid;
+        align-self: first baseline;
+        grid-template-rows: repeat(1fr);
+        grid-template-columns: 1fr;
+    }
+    .timer_item{
+         grid-row: auto;
+         grid-column: 1fr;
+    }
+}
